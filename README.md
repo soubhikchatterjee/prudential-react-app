@@ -13,3 +13,5 @@ ReactJS app based on the Prudential HTML Template
 2. cd prudential-react-app
 3. npm i
 4. npm run build
+
+Demo: https://prudential-book-store.netlify.com/
