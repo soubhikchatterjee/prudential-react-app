@@ -71,13 +71,15 @@ const Detail = ({
                 bookDetail[0].getElementsByTagName("title")[0].value}
             </h2>
             <h4 className="author">
-              {bookDetail &&
+              {typeof bookDetail[0]
+                .getElementsByTagName("book")[0]
+                .getElementsByTagName("authors")[0] !== "undefined" &&
                 bookDetail[0]
                   .getElementsByTagName("book")[0]
                   .getElementsByTagName("authors")[0]
                   .children.map(author => (
                     <span key={author.getElementsByTagName("id")[0].value}>
-                      {author.getElementsByTagName("name")[0].value},&nbsp;
+                      by {author.getElementsByTagName("name")[0].value},&nbsp;
                     </span>
                   ))}
             </h4>
